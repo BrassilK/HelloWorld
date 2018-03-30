@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Popups;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -25,6 +26,12 @@ namespace App1
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private async void cmdTest_Click(object sender, RoutedEventArgs e)
+        {
+            var dialog = new MessageDialog("Your message here");
+            await dialog.ShowAsync();
         }
     }
 }
